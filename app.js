@@ -1,12 +1,12 @@
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
-import connectDatabase from "./src/database/database.js";
+import db from "./src/database/database.js";
 import router from "./src/routes/index.js";
 
 const app = express();
 
-connectDatabase();
+db.connectDatabase();
 
 const allowedOrigins = [
   "http://localhost:5173",

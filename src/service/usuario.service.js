@@ -16,12 +16,12 @@ async function deleteUserService(id) {
   const user = await userRepositories.getUserByIdRepository(id);
   if (!user) throw new Error("Usuário não encontrado");
   await userRepositories.deleteUserRepository(id);
-  return;
+  return { message: "Usuário deletado com sucesso" };
 }
 
 async function getAllUserService() {
   const users = await userRepositories.getAllUserRepository();
-  if (users.length == 0) throw new Error("Nenhum usuário Encontrado");
+  if (users.length == 0) throw new Error("Nenhum usuário encontrado");
 
   return users;
 }
