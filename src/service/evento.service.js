@@ -21,7 +21,7 @@ async function deleteEventoService(id) {
   const evento = await eventoRepositories.getEventoByIdRepository(id);
   if (!evento) throw new Error("Evento não encontrado");
   await eventoRepositories.deleteEventoRepository(id);
-  return;
+  return { message: "Evento deletado com sucesso" };
 }
 
 async function getAllEventoService() {

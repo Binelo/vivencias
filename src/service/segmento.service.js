@@ -19,7 +19,7 @@ async function deleteSegmentoService(id) {
   const segmento = await segmentoRepositories.getSegmentoByIdRepository(id);
   if (!segmento) throw new Error("Segmento não encontrado");
   await segmentoRepositories.deleteSegmentoRepository(id);
-  return;
+  return { message: "Segmento deletado com sucesso" };
 }
 
 async function getAllSegmentoService() {

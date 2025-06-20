@@ -1,11 +1,11 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
 
-const SegmentoSchema = new mongoose.Schema({
-    nome: {
-        type: String,
-        required: true,
-    }
-})
+// const SegmentoSchema = new mongoose.Schema({
+//     nome: {
+//         type: String,
+//         required: true,
+//     }
+// })
 
-const Segmento = mongoose.model("Segmento", SegmentoSchema);
-export default Segmento;
+// const Segmento = mongoose.model("Segmento", SegmentoSchema);
+// export default Segmento;

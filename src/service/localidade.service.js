@@ -25,7 +25,7 @@ async function deleteLocalidadeService(id) {
   );
   if (!localidade) throw new Error("Localidade não encontrada");
   await localidadeRepositories.deleteLocalidadeRepository(id);
-  return;
+  return { message: "Localidade deletada com sucesso" };
 }
 
 async function getAllLocalidadeService() {

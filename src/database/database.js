@@ -9,10 +9,9 @@
 
 // export default connectDatabase;
 
-// banco.js
+
 import { createClient } from '@supabase/supabase-js';
 
-// Criar o cliente Supabase uma vez
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_ANON_KEY 
