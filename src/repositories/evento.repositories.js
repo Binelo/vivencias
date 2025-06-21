@@ -64,6 +64,20 @@ async function updateEventoRepository(id, data) {
   return evento;
 }
 
+async function updateEventoAprovarRepository(id, data) {
+  const { data: evento, error } = await supabase
+    .from('evento')
+    .update(data)
+    .eq('id', id)
+    .single();  // Retorna o evento atualizado
+  
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return evento;
+}
+
 async function deleteEventoRepository(id) {
   const { data, error } = await supabase
     .from('evento')
@@ -123,6 +137,7 @@ export default {
   getAllEventoRepository,
   getEventoByIdRepository,
   updateEventoRepository,
+  updateEventoAprovarRepository,
   deleteEventoRepository,
   getEventoByStatusRepository,
 };
