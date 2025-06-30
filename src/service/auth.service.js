@@ -7,11 +7,11 @@ function generateToken(id) {
   return jwt.sign({ id: id }, process.env.SECRET_JWT, { expiresIn: 175000 });
 }
 
-const loginService = async ({ email, password }) => {
+const loginService = async ({ email, senha }) => {
   const employee = await userRepositories.findByEmailUserRepository(email);
 
   if (!employee) throw new Error("Wrong password or email");
-  const isPasswordValid = await bcrypt.compare(password, employee.password);
+  const isPasswordValid = await bcrypt.compare(senha, employee.senha);
 
   if (!isPasswordValid) throw new Error("Invalid password");
 
