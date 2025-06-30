@@ -1,6 +1,8 @@
+import bcrypt from "bcrypt";
 import userRepositories from "../repositories/usuario.repositories.js";
 
 async function createUserService(data) {
+  if (data.password) data.password = await bcrypt.hash(data.password, 10);
   const user = await userRepositories.createUserRepository(data);
   return user;
 }

@@ -28,15 +28,13 @@
 //   deleteUserRepository,
 // };
 
-
-
 import db from "../database/database.js";
 
-const supabase = db.supabase
+const supabase = db.supabase;
 
 async function createUserRepository(data) {
   const { data: usuario, error } = await supabase
-    .from('usuario')
+    .from("usuario")
     .insert([
       {
         nome: data.nome,
@@ -45,13 +43,13 @@ async function createUserRepository(data) {
         senha: data.senha,
         email: data.email,
         telefone: data.telefone,
-        tipo_acesso: data.tipo_acesso || 'user',
+        tipo_acesso: data.tipo_acesso || "user",
       },
     ])
-    .single();  // Retorna apenas um item (um único usuário)
+    .single(); // Retorna apenas um item (um único usuário)
 
   if (error) {
-    throw new Error(error.message); 
+    throw new Error(error.message);
   }
 
   return usuario;
@@ -59,10 +57,10 @@ async function createUserRepository(data) {
 
 async function updateUserRepository(id, data) {
   const { data: usuario, error } = await supabase
-    .from('usuario')
-    .update(data)  // Passa os dados que você quer atualizar
-    .match({ id })  // Usando 'id' para buscar o usuário
-    .single();  // Retorna um único usuário atualizado
+    .from("usuario")
+    .update(data) // Passa os dados que você quer atualizar
+    .match({ id }) // Usando 'id' para buscar o usuário
+    .single(); // Retorna um único usuário atualizado
 
   if (error) {
     throw new Error(error.message);
@@ -72,43 +70,54 @@ async function updateUserRepository(id, data) {
 }
 
 async function deleteUserRepository(id) {
-  const { data, error } = await supabase
-    .from('usuario')
-    .delete()
-    .match({ id });  // Deleta o usuário com o 'id' correspondente
+  const { data, error } = await supabase.from("usuario").delete().match({ id }); // Deleta o usuário com o 'id' correspondente
 
   if (error) {
     throw new Error(error.message);
   }
 
-  return data;  // Retorna os dados deletados (se necessário)
+  return data; // Retorna os dados deletados (se necessário)
 }
 
 async function getAllUserRepository() {
   const { data, error } = await supabase
-    .from('usuario')
-    .select('*')  // Seleciona todos os campos da tabela
-    .order('id', { ascending: false });  // Ordena pela coluna 'id' em ordem decrescente
+    .from("usuario")
+    .select("*") // Seleciona todos os campos da tabela
+    .order("id", { ascending: false }); // Ordena pela coluna 'id' em ordem decrescente
 
   if (error) {
     throw new Error(error.message);
   }
 
-  return data;  // Retorna todos os usuários
+  return data; // Retorna todos os usuários
 }
 
 async function getUserByIdRepository(id) {
   const { data, error } = await supabase
-    .from('usuario')
-    .select('*')  // Seleciona todos os campos da tabela
-    .eq('id', id)  // Busca o usuário pelo id
-    .single();  // Retorna um único usuário
+    .from("usuario")
+    .select("*") // Seleciona todos os campos da tabela
+    .eq("id", id) // Busca o usuário pelo id
+    .single(); // Retorna um único usuário
 
   if (error) {
     throw new Error(error.message);
   }
 
-  return data;  // Retorna o usuário encontrado
+  return data; // Retorna o usuário encontrado
+}
+
+async function findByEmailUserRepository(email) {
+  const { data, error } = await supabase
+    .from("usuario")
+    .select("*")
+    .eq("email", email)
+    .single(); // Espera um único usuário com o email
+
+  if (error) {
+    throw new Error(error.message);
+  }
+
+  return data; // Retorna o usuário encontrado
 }
 
 export default {
@@ -117,4 +126,5 @@ export default {
   getUserByIdRepository,
   updateUserRepository,
   deleteUserRepository,
+  findByEmailUserRepository,
 };

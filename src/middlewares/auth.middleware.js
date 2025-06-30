@@ -1,8 +1,7 @@
 import "dotenv/config";
 import jwt from "jsonwebtoken";
 // import employeeRepositories from "../repositories/employee.repositories.js";
-import employeeRepositories from "../repositories/usuario.repositories.js";
-
+import userRepositories from "../repositories/usuario.repositories.js";
 
 function authMiddleware(req, res, next) {
   const authHeader = req.headers.authorization;
@@ -21,7 +20,7 @@ function authMiddleware(req, res, next) {
   jwt.verify(token, process.env.SECRET_JWT, async (err, decoded) => {
     if (err) return res.status(401).send({ message: "Invalid token!" });
 
-    const employee = await employeeRepositories.findById(decoded.id);
+    const employee = await userRepositories.findById(decoded.id);
     if (!employee || !employee.id)
       return res.status(401).send({ message: "Invalid token!" });
 
