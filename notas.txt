@@ -1,2 +1,4 @@
 - Ao criar alguma entidade, o objeto não é retornado na mesma requisição
 - Não enviar a senha do usuário quando ele for obtido
+
+SECRET_JWT
