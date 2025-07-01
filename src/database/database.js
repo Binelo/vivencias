@@ -9,27 +9,25 @@
 
 // export default connectDatabase;
 
-
-import { createClient } from '@supabase/supabase-js';
+import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
-  process.env.SUPABASE_ANON_KEY 
+  process.env.SUPABASE_ANON_KEY
 );
 
 // Função para testar a conexão com o Supabase
 function connectDatabase() {
   supabase
-    .from('usuario')
-    .select('*')
+    .from("usuario")
+    .select("*")
     .then(({ data, error }) => {
       if (error) {
-        console.error('Erro ao conectar no Supabase:', error);
+        console.error("Erro ao conectar no Supabase:", error);
       } else {
-        console.log('Conexão com Supabase bem-sucedida!', data);
+        console.log("Conexão com Supabase bem-sucedida!");
       }
     });
 }
 
 export default { supabase, connectDatabase };
-

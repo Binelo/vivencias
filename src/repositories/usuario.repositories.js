@@ -51,7 +51,7 @@ async function createUserRepository(data) {
   if (error) {
     throw new Error(error.message);
   }
-
+  console.log(usuario);
   return usuario;
 }
 
