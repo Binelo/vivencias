@@ -7,10 +7,7 @@ const eventoRouter = Router();
 eventoRouter.use(authMiddleware);
 eventoRouter.post("/create", eventoController.createEventoController);
 eventoRouter.patch("/update/:id", eventoController.updateEventoController);
-eventoRouter.patch(
-  "/:id/:status",
-  eventoController.updateEventoAprovarController
-);
+// eventoRouter.patch("/:id/:status", eventoController.updateEventoAprovarController);
 eventoRouter.delete("/delete/:id", eventoController.deleteEventoController);
 eventoRouter.get("/:status", eventoController.getEventoByStatusController);
 eventoRouter.get("/:id", eventoController.getEventoByIdController);

@@ -19,16 +19,16 @@ async function updateEventoController(req, res) {
   }
 }
 
-async function updateEventoAprovarController(req, res) {
-  const id = req.params.id;
-  const status = req.params.status;
-  try {
-    const evento = await eventoService.updateEventoAprovarService(id, status, req.body);
-    return res.status(200).send(evento);
-  } catch (error) {
-    return res.status(400).send(error.message);
-  }
-}
+// async function updateEventoAprovarController(req, res) {
+//   const id = req.params.id;
+//   const status = req.params.status;
+//   try {
+//     const evento = await eventoService.updateEventoAprovarService(id, status, req.body);
+//     return res.status(200).send(evento);
+//   } catch (error) {
+//     return res.status(400).send(error.message);
+//   }
+// }
 
 async function deleteEventoController(req, res) {
   const id = req.params.id;
@@ -73,7 +73,7 @@ export default {
   getAllEventoController,
   getEventoByIdController,
   updateEventoController,
-  updateEventoAprovarController,
+  // updateEventoAprovarController,
   deleteEventoController,
   getEventoByStatusController,
 };

@@ -1,0 +1,117 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "VIVENCIAS2",
+    "collectionId": "98494cd4-4b89-4365-915a-b448d4cdb7ae",
+    "dateExported": "2025-07-01T03:15:35.161Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "aaef3b89-ec21-4b62-a09e-58095a66207a",
+            "colId": "98494cd4-4b89-4365-915a-b448d4cdb7ae",
+            "containerId": "",
+            "name": "Atualizar Evento",
+            "url": "localhost:3000/evento/update/2",
+            "method": "PATCH",
+            "sortNum": 10000,
+            "created": "2025-06-20T15:10:52.343Z",
+            "modified": "2025-06-22T19:04:38.332Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Workshop de Java spring boot teste update\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6a90bea9-923e-420e-8529-34b08948fc54",
+            "colId": "98494cd4-4b89-4365-915a-b448d4cdb7ae",
+            "containerId": "",
+            "name": "Apagar Segmento",
+            "url": "localhost:3000/segmento/delete/2",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2025-06-20T15:12:30.224Z",
+            "modified": "2025-06-20T15:12:30.224Z",
+            "headers": []
+        },
+        {
+            "_id": "e7ccb66e-f252-457d-9e89-182060a4383d",
+            "colId": "98494cd4-4b89-4365-915a-b448d4cdb7ae",
+            "containerId": "",
+            "name": "Obter Evento por Status",
+            "url": "localhost:3000/evento/aprovado",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-06-21T00:09:45.786Z",
+            "modified": "2025-06-21T00:12:45.599Z",
+            "headers": []
+        },
+        {
+            "_id": "c0cf1caf-f144-4ca8-8075-fe55116b9631",
+            "colId": "98494cd4-4b89-4365-915a-b448d4cdb7ae",
+            "containerId": "",
+            "name": "Atualizar Status do Evento",
+            "url": "localhost:3000/evento/8/rejeitado",
+            "method": "PATCH",
+            "sortNum": 20000,
+            "created": "2025-06-21T00:31:23.233Z",
+            "modified": "2025-06-22T19:42:28.081Z",
+            "headers": []
+        },
+        {
+            "_id": "af6d883f-4a76-4603-b054-9ba5b1b2db76",
+            "colId": "98494cd4-4b89-4365-915a-b448d4cdb7ae",
+            "containerId": "",
+            "name": "Apagar Localidade",
+            "url": "localhost:3000/localidade/delete/2",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2025-06-20T15:13:24.162Z",
+            "modified": "2025-06-20T15:14:51.199Z",
+            "headers": []
+        },
+        {
+            "_id": "cae80d57-e37b-469d-87e3-7d9f03768879",
+            "colId": "98494cd4-4b89-4365-915a-b448d4cdb7ae",
+            "containerId": "",
+            "name": "Apagar Usuário",
+            "url": "localhost:3000/user/delete/4",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2025-06-20T15:13:58.967Z",
+            "modified": "2025-06-20T15:20:08.290Z",
+            "headers": []
+        },
+        {
+            "_id": "df28e3f4-669d-4043-8532-f902fc4e10e6",
+            "colId": "98494cd4-4b89-4365-915a-b448d4cdb7ae",
+            "containerId": "",
+            "name": "Apagar Evento",
+            "url": "localhost:3000/evento/delete/2",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2025-06-20T15:14:17.849Z",
+            "modified": "2025-06-20T15:14:53.351Z",
+            "headers": []
+        },
+        {
+            "_id": "1bd4ef25-fa53-4194-82d1-4420a87b5c53",
+            "colId": "98494cd4-4b89-4365-915a-b448d4cdb7ae",
+            "containerId": "",
+            "name": "Login",
+            "url": "localhost:3000/auth/login",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2025-07-01T02:32:59.582Z",
+            "modified": "2025-07-01T02:34:20.527Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"admin3@gmail.com\",\n  \"senha\": \"123\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "aLVVzv9WKLrLSOZIvtLhQGHeO9Kxze8cyo0jU_969ozFZDL1qP_e-nqXe74LTLa7nx2ixhMkFMvO6vV__4z67w"
+}

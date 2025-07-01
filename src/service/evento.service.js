@@ -12,13 +12,13 @@ async function updateEventoService(id, data) {
   return eventoAt;
 }
 
-async function updateEventoAprovarService(id, status, data) {
-  const evento = await eventoRepositories.getEventoByIdRepository(id);
-  if (!evento) throw new Error("Evento não encontrado");
-  data.status_aprovacao = status;
-  const eventoAt = await eventoRepositories.updateEventoAprovarRepository(id, data);
-  return eventoAt;
-}
+// async function updateEventoAprovarService(id, status, data) {
+//   const evento = await eventoRepositories.getEventoByIdRepository(id);
+//   if (!evento) throw new Error("Evento não encontrado");
+//   data.status_aprovacao = status;
+//   const eventoAt = await eventoRepositories.updateEventoAprovarRepository(id, data);
+//   return eventoAt;
+// }
 
 async function deleteEventoService(id) {
   const evento = await eventoRepositories.getEventoByIdRepository(id);
@@ -53,7 +53,7 @@ export default {
   getAllEventoService,
   getEventoById,
   updateEventoService,
-  updateEventoAprovarService,
+  // updateEventoAprovarService,
   deleteEventoService,
   getEventoByStatusService,
 };

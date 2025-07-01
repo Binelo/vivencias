@@ -1,0 +1,234 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "VIVENCIAS",
+    "collectionId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+    "dateExported": "2025-07-01T03:15:11.392Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "30086f7b-b2e3-494a-920f-8a49427ad2fd",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Obter Todos os Usuários",
+            "url": "localhost:3000/user",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-06-20T02:07:41.252Z",
+            "modified": "2025-07-01T02:38:38.100Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzUxMzM3NDE4LCJleHAiOjE3NTE1MTI0MTh9.rjv_ZaZuVfnC3A9hfRZ46EVFNrvVPgEVW3QO7xgBCyk"
+            }
+        },
+        {
+            "_id": "bc5b47a8-1c7e-4b5c-976d-8b0939cea51a",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Criar Usuário",
+            "url": "localhost:3000/user/create",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-06-20T02:08:03.222Z",
+            "modified": "2025-07-01T02:33:24.571Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Admin3\",\n  \"tipo_usuario\": 2,\n  \"cpf_cnpj\": \"12345678901\",\n  \"senha\": \"123\",\n  \"email\": \"admin3@gmail.com\",\n  \"telefone\": 123456789,\n  \"tipo_acesso\": \"admin\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "96207344-ad7c-4fef-9e4f-f859b1151b81",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Obter Usuário por id",
+            "url": "localhost:3000/user/3",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-06-20T13:13:59.648Z",
+            "modified": "2025-06-20T13:14:51.489Z",
+            "headers": []
+        },
+        {
+            "_id": "a3713e11-c15b-48d4-b36f-4488eace939b",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Obter Todos as Localidades",
+            "url": "localhost:3000/localidade",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2025-06-20T13:55:26.456Z",
+            "modified": "2025-07-01T02:41:36.844Z",
+            "headers": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNzUxMzM3NDE4LCJleHAiOjE3NTE1MTI0MTh9.rjv_ZaZuVfnC3A9hfRZ46EVFNrvVPgEVW3QO7xgBCyk"
+            }
+        },
+        {
+            "_id": "785d208a-6408-4191-9327-0a6cedb0d944",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Criar Evento",
+            "url": "localhost:3000/evento/create",
+            "method": "POST",
+            "sortNum": 25000,
+            "created": "2025-06-20T14:16:48.882Z",
+            "modified": "2025-06-22T19:41:45.803Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Workshop de Culinário com Juca Viar\",\n  \"data\": \"2025-06-23\",\n  \"horario_inicio\": \"18:00:00\",\n  \"horario_fim\": \"22:00:00\",\n  \"id_usuario\": 3,\n  \"id_segmento\": 1,\n  \"id_localidade\": 1,\n  \"descricao\": \"Um workshop intensivo para aprender a cozinhar um projeto\",\n  \"imagem_banner_1\": \"\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "cf59d6d5-1533-497b-8827-3f141a9763df",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Atualizar Usuário",
+            "url": "localhost:3000/user/update/3",
+            "method": "PATCH",
+            "sortNum": 30000,
+            "created": "2025-06-20T13:18:29.390Z",
+            "modified": "2025-06-20T13:18:29.390Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Murilo Teichert\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "be461acf-382d-46d6-9022-bc4cc6b6781d",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Obter Localidade por id",
+            "url": "localhost:3000/localidade/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-06-20T13:58:21.243Z",
+            "modified": "2025-06-20T13:58:41.972Z",
+            "headers": []
+        },
+        {
+            "_id": "65dfad1d-216e-475b-9527-e8029a34e125",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Criar Localidade",
+            "url": "localhost:3000/localidade/create",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-06-20T13:59:18.392Z",
+            "modified": "2025-06-30T19:12:45.534Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"UDESC\",\n  \"endereco\": \"Av. José Vieira\",\n  \"numero\": 315,\n  \"bairro\": \"América\",\n  \"cep\": 89204110,\n  \"capacidade\": 1000\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "62ae0baa-f6ab-42c9-a61f-1ad74282ba0c",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Obter Todos os Segmentos",
+            "url": "localhost:3000/segmento",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-06-20T14:05:59.032Z",
+            "modified": "2025-06-20T15:15:49.361Z",
+            "headers": []
+        },
+        {
+            "_id": "4afd003d-893b-4116-add7-5de9c36a15bc",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Criar Segmento",
+            "url": "localhost:3000/segmento/create",
+            "method": "POST",
+            "sortNum": 35000,
+            "created": "2025-06-20T14:07:22.512Z",
+            "modified": "2025-06-20T15:15:05.960Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Palestra\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "2770b02a-c0c3-4bee-b006-245e2eeeed6e",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Atualizar Localidade",
+            "url": "localhost:3000/localidade/update/1",
+            "method": "PATCH",
+            "sortNum": 40000,
+            "created": "2025-06-20T14:04:36.761Z",
+            "modified": "2025-06-20T14:05:44.036Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Centreventos Cau Hansen\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "e95180b6-195d-4e19-99cf-323246ce2f0c",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Obter Segmentos por id",
+            "url": "localhost:3000/segmento/1",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-06-20T14:06:35.179Z",
+            "modified": "2025-06-20T15:05:54.186Z",
+            "headers": []
+        },
+        {
+            "_id": "2040c5c6-2a3c-4522-848f-0b568080b922",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Obter Todos os Eventos",
+            "url": "localhost:3000/evento",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-06-20T14:11:22.681Z",
+            "modified": "2025-06-20T14:16:33.853Z",
+            "headers": []
+        },
+        {
+            "_id": "82122007-ba89-46f9-81da-45928f1b5532",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Atualizar Segmento",
+            "url": "localhost:3000/segmento/update/1",
+            "method": "PATCH",
+            "sortNum": 50000,
+            "created": "2025-06-20T14:08:48.767Z",
+            "modified": "2025-06-20T14:10:55.316Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Workshop e Palestra\"\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "b59b5b32-fb3b-488f-afbf-188808386fa5",
+            "colId": "7d2cb41c-4871-412c-b0ff-d7bdd0881fcd",
+            "containerId": "",
+            "name": "Obter Evento por id",
+            "url": "localhost:3000/evento/1",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2025-06-20T15:05:16.696Z",
+            "modified": "2025-06-20T15:06:01.440Z",
+            "headers": []
+        }
+    ],
+    "ref": "FXc4M91G4M3BMGH-6CdUkdTwsOvZR_sQ5gU16GINP6E3yFAbNg7w5yoqYfn1uW3_AVxknrsq7n3jVTZKwgzWlw"
+}
