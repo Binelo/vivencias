@@ -6,9 +6,9 @@ const userRouter = Router();
 
 userRouter.post("/create", userController.createUserController);
 userRouter.use(authMiddleware);
-userRouter.patch("/update/:id", userController.updateUserController);
-userRouter.delete("/delete/:id", userController.deleteUserController);
 userRouter.get("/:id", userController.getUserByIdController);
 userRouter.get("/", userController.getAllUserController);
+userRouter.patch("/update/:id", userController.updateUserController);
+userRouter.delete("/delete/:id", userController.deleteUserController);
 
 export default userRouter;

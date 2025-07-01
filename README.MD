@@ -5,7 +5,7 @@ Esta é a parte back-end do programa desenvolvido para a matéria de Vivências 
 ## Funcionamento do sistema
 
 Para fazer as chamadas, é necessário criar e logar em uma conta. Após o login, copie e cole a chave e coloque
-juntamente com a chamada, na aba Auth -> Bearer.  
+juntamente com a chamada, na aba Auth -> Bearer (com exceção das rotas GET).  
 As operações CRUD estão disponíveis para todas as entidades - Usuário, Evento, Localidade e Segmento.  
 Certifique-se de ter o arquivo .env com as variáveis necessárias.  
 

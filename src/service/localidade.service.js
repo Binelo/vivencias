@@ -36,9 +36,7 @@ async function getAllLocalidadeService() {
 }
 
 async function getLocalidadeById(id) {
-  const localidade = await localidadeRepositories.getLocalidadeByIdRepository(
-    id
-  );
+  const localidade = await localidadeRepositories.getLocalidadeByIdRepository(id);
   if (!localidade) throw new Error("Localidade não encontrado");
 
   return localidade;
