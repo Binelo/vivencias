@@ -15,7 +15,7 @@ const loginService = async ({ email, senha }) => {
 
   if (!isPasswordValid) throw new Error("Invalid password");
 
-  if (!employee.active) throw new Error("Login is not active");
+  // if (!employee.active) throw new Error("Login is not active");
 
   const token = generateToken(employee.id);
 

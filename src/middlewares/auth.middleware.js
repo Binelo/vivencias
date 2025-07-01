@@ -20,7 +20,7 @@ function authMiddleware(req, res, next) {
   jwt.verify(token, process.env.SECRET_JWT, async (err, decoded) => {
     if (err) return res.status(401).send({ message: "Invalid token!" });
 
-    const employee = await userRepositories.findById(decoded.id);
+    const employee = await userRepositories.getUserByIdRepository(decoded.id);
     if (!employee || !employee.id)
       return res.status(401).send({ message: "Invalid token!" });
 
